@@ -1,0 +1,345 @@
+
+body{
+    margin: 0;
+    background-image: url(../images/metal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: difference;
+
+}
+#content {
+    margin: auto;
+    max-width: 1500px;                                        
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas: "nav header login"
+     "main main main"
+     "footer footer message";  
+    box-shadow: inset 0 0 20px #000000; 
+}
+
+#content > *{
+    background:white;
+    
+}
+nav{
+    grid-area: nav;
+}
+header{
+    grid-area: header;
+    background-color: #000;
+}
+header h1{
+    font-family: 'Changa', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 350px;
+    color: red;
+}
+.login{
+    grid-area: login;
+    background-color: #000;
+    text-align: end;
+}
+.login p a{
+    color: red;
+    text-decoration: none;
+
+}
+/* Main Content + BG*/
+main {
+    display: grid;
+    grid-template-areas: 
+    "title" 
+    "button"
+    "speech";
+    text-align: center;
+    grid-template-rows: 300px;
+    grid-area: main;
+    background-image: url("../images/muscle2.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 1100px;
+}
+
+.maintitle{
+    text-align: center;
+    color: #fff;
+}
+
+audio{
+    background-color: red;
+}
+.speech {
+color: #fff;
+background: rgba(0,0,0,0.4);
+}
+.speech p {
+    text-align: start;
+    font-size: 17px;
+    font-family: 'Changa', sans-serif;
+}
+
+/*Button Animation */
+.title {
+    color: red;
+    grid-area: title;
+    margin: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-area: button;
+    width: 100%;
+    margin-left: 55px;
+}
+
+.button {
+    position: relative;
+    width: 250px;
+    height: 30px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    background: linear-gradient(to right, rgb(226, 3, 3) 50%, rgb(0, 0, 0) 50%);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Changa', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 30px 50px;
+    overflow: hidden;
+}
+
+.button:first-child {
+    margin: 0 20px 0 0;
+}
+
+.button:last-child {
+    margin: 0 0 0 20px;
+}
+
+.buttons a span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(226, 3, 3), #000000);
+    animation: animate1 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.buttons a span:nth-child(2){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(226, 3, 3), #000000);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.buttons a span:nth-child(3){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgb(226, 3, 3), #000000);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.buttons a span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, rgb(226, 3, 3), #000000);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/*Button Animation END*/
+
+
+/* Main Content + BG*/
+
+
+
+
+
+
+/* Hamburger Menu */
+.nav{
+    grid-area: nav;  
+}
+#menu{
+    width: 35px;
+    height: 35px;
+    margin: 55px 0 20px 20px;
+    cursor: pointer;
+    
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+.nav li a{
+    color: #000;
+    text-decoration: none;   
+    font-size: 20px;
+}
+.nav li a:hover{
+    font-weight: bold;
+    font-size: 25px;
+}
+.nav li{
+    list-style: none;
+    padding: 20px 0;
+}
+.nav{
+    padding: 0px;
+    margin: 10px 10px;
+    transition: 0.3s ease;
+    display: none;
+}
+.menu-bg, #menu-bg{
+    top: 0px;
+    left: 250px;
+    position: absolute;
+    background-color: rgb(133, 36, 36);
+}
+.menu-bg{
+    z-index: -1;
+    width: 0;
+    height: 0;
+    margin: 35px 0 10px 0px;
+    transition: 0.3s ease;
+}
+#menu-bar{
+    z-index: 1;
+    background-color: #000;
+}
+.change-bg{
+    width: 350px;
+    height: 40%;
+    margin: 0;
+
+    transform: translate(-15%,-6%);
+}
+.change .bar{
+    background-color: #000;
+}
+.change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+    transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.change{
+    width: 200px;
+    background-color: red;
+    display: block;
+}
+/* Hamburger Menu ENDS*/
+
+
+
+footer{
+    grid-area: footer;
+    background-color: #000;
+}
+.message{
+    grid-area: message;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.fa-facebook,.fa-twitter-square,.fa-instagram,.fa-phone,.fa-envelope-square{
+    color: red;
+    font-size: 25px;
+    padding: 8px;
+
+}
+footer h2{
+    color: red;
+    margin-left: 5px;
+}
+footer p{
+    color: red;
+    margin-left: 5px;
+}
+.inputsize{
+    width: 200px;
+    height: 150px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    /* Main Content + BG*/
+    main{
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-area: main;
+        text-align: center;
+        justify-self: center;
+        justify-content: center;
+    }
+    img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 200px;
+        left: 202px;
+    }
+  }
+

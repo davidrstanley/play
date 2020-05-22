@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    background-image: url(../images/custombg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas: "header drop"
+                         "main section"
+                         "footer message";
+}
+header{
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    color: #fff;
+}
+.drop{
+    grid-area: drop;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+main{
+    grid-area: main;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    box-shadow: inset 0 0 10px #000000;
+    border: 1px solid #fff;
+}
+h2{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+.workout{
+    grid-area: workout;
+    display: grid;
+    grid-template-columns: repeat(6,180px);
+
+
+}
+/* Workout Colors */
+.workout h4{
+    text-align: center;
+}
+
+.chest p{
+    margin-right: 10px;
+    background-color: red;
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+
+.tricep p{
+    background-color: blue;
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+.shoulder p{
+    background-color: orange;
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+.shoulder p{
+    background-color: orange;
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+.back p{
+    background-color: green;
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+.bicep p{
+    background-color: rgb(3, 238, 247);
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000;
+}
+.legs p{
+    background-color: rgb(247, 3, 206);
+    width: 170px;
+    height: 40px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 5px #000000; 
+}
+
+.numbers p{
+    background-color: rgb(255, 255, 255);
+    width: 170px;
+    height: 40px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+
+    box-shadow: inset 0 0 5px #000000; 
+}
+/* Workout Colors END */
+
+section{
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    grid-area: section;
+    margin: 0 0 0 2px;
+    padding: 10px;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 10px #000000; 
+
+}
+.create{
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+
+}
+
+
+.sets, .excerise, .reps{
+    margin-left: 50px;
+    border: 2px solid red;
+    margin-top: 5px;
+    box-shadow:  0 0 10px #000000; 
+    width: 180px;
+    height: 60px;
+}
+
+
+/* Footer */
+footer{
+    grid-area: footer;
+    background-color: #000;
+    margin-top: 2px;
+}
+.message{
+    grid-area: message;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.fa-facebook,.fa-twitter-square,.fa-instagram,.fa-phone,.fa-envelope-square{
+    color: red;
+    font-size: 25px;
+    padding: 8px;
+
+}
+footer h2{
+    color: red;
+    margin-left: 5px;
+}
+footer p{
+    color: red;
+    margin-left: 5px;
+}
+.inputsize{
+    width: 200px;
+    height: 150px;
+}
+
+
+

@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+}
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-auto-rows: minmax(200px,auto);
+    grid-template-areas: "header login"
+                         "main section"
+                         "footer message";
+}
+
+/* Header Area */
+header{
+    background-color: #000;
+    color: #fff;
+}
+.login{
+    grid-area: login;
+    background-color: #000;
+    text-align: end;
+}
+/* Header Area Ends */
+
+/* Main Area */
+main{
+    color: #fff;
+    grid-area: main;
+    background: rgba(0,0,0,0.8);
+}
+.men{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    background-color: lightgray;
+    box-shadow: inset 0 0 10px #000000;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    margin-bottom: 3px;
+}
+.menbg{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    font-size: 24px;
+    background-color: red;
+    box-shadow: inset 0 0 10px #000000;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;  
+}
+
+.women{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    box-shadow: inset 0 0 10px #000000;
+    background-color: lightgray;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    margin-bottom: 3px;
+}
+.womenbg{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    font-size: 24px;
+    background-color: red;
+    box-shadow: inset 0 0 10px #000000;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+/* Main Area Ends */
+
+/* Section Area */
+section{
+    color: #fff;
+    grid-area: section;
+    background: rgba(0,0,0,0.8);
+}
+/* Section Area Ends */
+
+/* Footer Area */
+footer{
+    grid-area: footer;
+    background-color: #000;
+}
+.message{
+    grid-area: message;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.fa-facebook,.fa-twitter-square,.fa-instagram,.fa-phone,.fa-envelope-square{
+    color: red;
+    font-size: 25px;
+    padding: 8px;
+
+}
+footer h2{
+    color: red;
+    margin-left: 5px;
+}
+footer p{
+    color: red;
+    margin-left: 5px;
+}
+.inputsize{
+    width: 200px;
+    height: 150px;
+}
+/* Footer Area Ends*/
